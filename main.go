@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/iikira/BaiduPCS-Go/util"
+	"github.com/iikira/BaiduPCS-Go/pcsutil"
 	"net"
 	"net/http"
 	"net/url"
@@ -16,7 +16,7 @@ var (
 
 func init() {
 	flag.UintVar(&port, "port", 80, "port")
-	flag.StringVar(&path, "path", "/", "local absolutely path")
+	flag.StringVar(&path, "path", "/", "local relative or absolute path")
 
 	flag.Parse()
 }
